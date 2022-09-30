@@ -22,6 +22,7 @@
 
     <style>
         /* 모달 팝업 창 */
+        /* 이미지 업로드 모달 */
         .modal_overlay {
             width: 100%;
             height: 100%;
@@ -52,7 +53,82 @@
             position: relative;
             padding: 10px;
         }
+        /* 이미지 업로드 모달 */
+        /* 홈 피드 모달 */
+        .modal_overlay_home_feed {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(1.5px);
+            -webkit-backdrop-filter: blur(1.5px);
+        }
 
+        .modal_window_home_feed {
+            background: white;
+            backdrop-filter: blur(13.5px);
+            -webkit-backdrop-filter: blur(13.5px);
+            border-radius: 3px;
+            width: 85vw;
+            height: 85vh;
+            max-width: 2000px;
+            min-width: 1000px;
+            max-height: 1500px;
+            min-height: 750px;
+            position: relative;
+        }
+
+        .modal_window_home_feed_detail {
+            background: white;
+            backdrop-filter: blur(13.5px);
+            -webkit-backdrop-filter: blur(13.5px);
+            border-radius: 3px;
+            width: 85vw;
+            height: 85vh;
+            max-width: 2000px;
+            min-width: 1000px;
+            max-height: 1500px;
+            min-height: 750px;
+            position: relative;
+        }
+
+        .modal_window_home_feed_detail_left {
+            width: 50vw;
+            height: 85vh;
+            max-width: 1176px;
+            min-width: 588px;
+            max-height: 1500px;
+            min-height: 750px;
+
+        }
+
+        .modal_window_home_feed_detail_left > img {
+            width: 50vw;
+            height: 85vh;
+            max-width: 1176px;
+            min-width: 588px;
+            max-height: 1500px;
+            min-height: 750px;
+
+        }
+
+        .modal_window_home_feed_detail_right {
+            width: 35vw;
+            height: 85vh;
+            max-width: 823px;
+            min-width: 411px;
+            max-height: 1500px;
+            min-height: 750px;
+            padding: 10px;
+        }
+
+        /* 홈 피드 모달 */
         /* 모달 팝업 창 */
 
 
@@ -88,6 +164,7 @@
             margin: 10px;
             min-height: auto;
             padding-bottom: 10px;
+            border-radius: 10px;
         }
 
         .feed_img {

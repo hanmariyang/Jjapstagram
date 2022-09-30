@@ -1,144 +1,348 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <!-- 바디 영역 -->
-    <div class="main_body">
-        <div class="left_body">
-            <div class="border feed_box">
-                <div class="feed_name">
-                    <div class="profile_box">
-                        <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
-                    </div>
-                    <span class="feed_name_txt"> hanmariyang </span>
+<!-- 바디 영역 -->
+<div class="main_body">
+    <div class="left_body">
+        <!-- 피드 박스1 -->
+        <div class="border feed_box">
+            <div class="feed_name">
+                <div class="profile_box">
+                    <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
                 </div>
-                <img class="feed_img"
-                    src="https://i.ytimg.com/vi/J9R6yyJuM2w/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBB3xrbEi4Rx38i5FtMNqc_2iNRTA">
+                <span class="feed_name_txt"> hanmariyang </span>
+            </div>
+            <img class="feed_img"
+                src="https://i.ytimg.com/vi/J9R6yyJuM2w/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBB3xrbEi4Rx38i5FtMNqc_2iNRTA">
 
-                <div class="feed_icon">
-                    <div>
-                        <span class="material-icons-outlined">
-                            favorite_border
-                        </span>
-                        <span class="material-icons-outlined">
-                            mode_comment
-                        </span>
-                        <span class="material-icons-outlined">
-                            send
-                        </span>
-                    </div>
-                    <div>
-                        <span class="material-icons-outlined">
-                            turned_in_not
-                        </span>
-                    </div>
+            <div class="feed_icon">
+                <div>
+                    <span class="material-icons-outlined">
+                        favorite_border
+                    </span>
+                    <span id="left_box_feed_comment_bt" class="material-icons-outlined">
+                        mode_comment
+                    </span>
+                    <span class="material-icons-outlined">
+                        send
+                    </span>
                 </div>
-                <div class="feed_like">
-                    <p class="feed_txt"> <b>좋아요 92개</b></p>
-                </div>
-                <div class="feed_content">
-                    <p class="feed_txt"> <b> hanmariyang </b> 새로 구매한 텐트 자랑하기</p>
-                </div>
-                <div class="feed_reply">
-                    <span class="feed_txt"> <b> hanmariyang </b> #가마보코3M #가을캠핑 #텐트추천 #DOD </span>
-                    <span class="feed_txt"> <b> aaaa </b> 멋져욧 </span>
-                    <span class="feed_txt"> <b> adsfg34 </b> 대박 </span>
+                <div>
+                    <span class="material-icons-outlined">
+                        turned_in_not
+                    </span>
                 </div>
             </div>
-        </div>
-        <div class="right_body">
-            <div class="feed_name" style="justify-content: space-between">
-                <div style="display: flex; align-items: center; ">
-                    <div class="big_profile_box">
-                        <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
-                    </div>
-                    <div class="name_content">
-                        <span class="feed_name_txt"> hanmariyang </span>
-                        <span class="name_content_txt"> 철기양 </span>
-                    </div>
+            <div class="feed_like">
+                <p class="feed_txt"> <b>좋아요 92개</b></p>
+            </div>
+            <div class="feed_content">
+                <p class="feed_txt"> <b> hanmariyang </b> 새로 구매한 텐트 자랑하기</p>
+            </div>
+            <div class="feed_reply">
+                <span class="feed_txt"> <b> hanmariyang </b> #가마보코3M #가을캠핑 #텐트추천 #DOD </span>
+                <span class="feed_txt"> <b> aaaa </b> 멋져욧 </span>
+                <span class="feed_txt"> <b> adsfg34 </b> 대박 </span>
+            </div>
+            <div
+                style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px 10px 0 10px; border-top: solid 1px lightgray;">
+                <div style="display: flex; flex-direction: row;">
+                    <span class="material-icons-outlined">
+                        sentiment_satisfied
+                    </span>
+                    <textarea style="width: 360px; height: 30px; border: none; outline: none;" placeholder="댓글 달기..."
+                        onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
                 </div>
+                <div style="width: 40px;">
 
+                </div>
                 <a class="link_txt">
-                    전환
+                    게시
                 </a>
             </div>
-
-            <div class="recommend_box">
-                <span style="color: gray"> 회원님을 위한 추천</span>
-                <span style="font-size: 12px"> 모두 보기 </span>
+        </div>
+        <!-- 피드 박스1 -->
+        <!-- 피드 박스2 -->
+        <div class="border feed_box">
+            <div class="feed_name">
+                <div class="profile_box">
+                    <img class="profile_img"
+                        src="https://postfiles.pstatic.net/MjAxNzAxMjVfNjgg/MDAxNDg1MzQ3MjYzNTIw.IB5YXvQks3A7YMCGPFquwhUzk22kcIIlEbljopJI7oMg.lflw9ONya4dCz4MX2BaaVy01Dpxyetpnp7M0yqirZoYg.JPEG.burudi06/downloadfile-2.jpg?type=w773">
+                </div>
+                <span class="feed_name_txt"> taekyum </span>
             </div>
-            <div>
-                <div class="feed_name" style="justify-content: space-between">
-                    <div class="profile_box">
-                        <img class="profile_img"
-                            src="https://postfiles.pstatic.net/MjAxNzAxMjVfMTA3/MDAxNDg1MzQ3NDMyMTM4.2sRKA7NuS-DIbHT9Mn9QtqTAeQ86y4mmcAWKPtTXulcg.PWNltFJ638pdVapdvRtzRR9m7LavQSVTwsWJsQIeQAIg.JPEG.burudi06/IMG_20170120_171306.jpg?type=w773">
-                    </div>
-                    <div class="name_content">
-                        <span class="feed_name_txt"> changnam </span>
-                        <span class="name_content_txt"> farmstargram 신규가입</span>
-                    </div>
-                    <a class="link_txt">
-                        팔로우
-                    </a>
+            <img class="feed_img"
+                src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcdFTaB%2FbtrKIrL7A5l%2FRTtVpzqKXACPKrL9RQ8VE0%2Fimg.jpg">
+
+            <div class="feed_icon">
+                <div>
+                    <span class="material-icons-outlined">
+                        favorite_border
+                    </span>
+                    <span id="left_box_feed_comment_bt" class="material-icons-outlined">
+                        mode_comment
+                    </span>
+                    <span class="material-icons-outlined">
+                        send
+                    </span>
                 </div>
-                <div class="feed_name" style="justify-content: space-between">
-                    <div class="profile_box">
-                        <img class="profile_img"
-                            src="https://postfiles.pstatic.net/MjAxNzAxMjVfNjgg/MDAxNDg1MzQ3MjYzNTIw.IB5YXvQks3A7YMCGPFquwhUzk22kcIIlEbljopJI7oMg.lflw9ONya4dCz4MX2BaaVy01Dpxyetpnp7M0yqirZoYg.JPEG.burudi06/downloadfile-2.jpg?type=w773">
-                    </div>
-                    <div class="name_content">
-                        <span class="feed_name_txt"> taekyum </span>
-                        <span class="name_content_txt"> changnam 외 3명이 팔로우</span>
-                    </div>
-                    <a class="link_txt">
-                        팔로우
-                    </a>
-                </div>
-                <div class="feed_name" style="justify-content: space-between">
-                    <div class="profile_box">
-                        <img class="profile_img"
-                            src="https://postfiles.pstatic.net/MjAxNzAxMjVfMjI4/MDAxNDg1MzQ2MDk5NzI0.5-K0csbmI3aPSkHZhbF68ZK6zCXaQJ0UyVCJVYhExOcg.7iYR3p4BryiWYPZ7rXj0YoZuuGP6frNnjPslWRPDRHUg.JPEG.burudi06/IMG_20170118_235012.jpg?type=w773">
-                    </div>
-                    <div class="name_content">
-                        <span class="feed_name_txt"> wooseok </span>
-                        <span class="name_content_txt"> taekyum 외 4명이 팔로우</span>
-                    </div>
-                    <a class="link_txt">
-                        팔로우
-                    </a>
-                </div>
-                <div class="feed_name" style="justify-content: space-between">
-                    <div class="profile_box">
-                        <img class="profile_img"
-                            src="https://postfiles.pstatic.net/MjAxNzAxMjVfMTA1/MDAxNDg1MzQ0OTE3MTY1.nD1XKRmZ3qlUpPh0pPsSfrdjAYufXGOZQjCz0a8CNgcg.MU0orZNkJcyOFipkAI3FjBIiA4UbgbmaS5GSWT51liYg.PNG.burudi06/20160406_100024.png?type=w773">
-                    </div>
-                    <div class="name_content">
-                        <span class="feed_name_txt"> devjunseok </span>
-                        <span class="name_content_txt"> wooseok님이 팔로우합니다 </span>
-                    </div>
-                    <a class="link_txt">
-                        팔로우
-                    </a>
-                </div>
-                <div class="feed_name" style="justify-content: space-between">
-                    <div class="profile_box">
-                        <img class="profile_img"
-                            src="https://postfiles.pstatic.net/20151110_289/junirism_1447084723580AN59O_JPEG/Untitled.jpg?type=w1">
-                    </div>
-                    <div class="name_content">
-                        <span class="feed_name_txt"> byunyohan_official </span>
-                        <span class="name_content_txt"> devjunseok님이 팔로우합니다 </span>
-                    </div>
-                    <a class="link_txt">
-                        팔로우
-                    </a>
+                <div>
+                    <span class="material-icons-outlined">
+                        turned_in_not
+                    </span>
                 </div>
             </div>
-            <div class="comment_box">
-                <span> 팜스타그램 </span>
-                <span> https://hanmari-code.tistory.com/ </span>
-                <br>
-                <span> @2022 hanmari-code </span>
+            <div class="feed_like">
+                <p class="feed_txt"> <b>좋아요 132개</b></p>
+            </div>
+            <div class="feed_content">
+                <p class="feed_txt"> <b> taekyum </b> 헌혈 기념! </p>
+            </div>
+            <div class="feed_reply">
+                <span class="feed_txt"> <b> taekyum </b> #헌혈 #레드크로스 </span>
+                <span class="feed_txt"> <b> hanmariyang </b> 맞팔해요 </span>
+                <span class="feed_txt"> <b> changnam </b> 헌혈 아프겠다~ </span>
+            </div>
+            <div
+                style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px 10px 0 10px; border-top: solid 1px lightgray;">
+                <div style="display: flex; flex-direction: row;">
+                    <span class="material-icons-outlined">
+                        sentiment_satisfied
+                    </span>
+                    <textarea style="width: 360px; height: 30px; border: none; outline: none;" placeholder="댓글 달기..."
+                        onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+                </div>
+                <div style="width: 40px;">
 
+                </div>
+                <a class="link_txt">
+                    게시
+                </a>
             </div>
         </div>
-{% endblock %}
+        <!-- 피드 박스2 -->
+        <!-- 피드 박스3 -->
+        <div class="border feed_box">
+            <div class="feed_name">
+                <div class="profile_box">
+                    <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
+                </div>
+                <span class="feed_name_txt"> hanmariyang </span>
+            </div>
+            <img class="feed_img"
+                src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXVold%2FbtrKMEEnwO8%2FEaZrcqFcU0CZUYSS9gzdik%2Fimg.jpg">
+
+            <div class="feed_icon">
+                <div>
+                    <span class="material-icons-outlined">
+                        favorite_border
+                    </span>
+                    <span id="left_box_feed_comment_bt" class="material-icons-outlined">
+                        mode_comment
+                    </span>
+                    <span class="material-icons-outlined">
+                        send
+                    </span>
+                </div>
+                <div>
+                    <span class="material-icons-outlined">
+                        turned_in_not
+                    </span>
+                </div>
+            </div>
+            <div class="feed_like">
+                <p class="feed_txt"> <b>좋아요 42개</b></p>
+            </div>
+            <div class="feed_content">
+                <p class="feed_txt"> <b> hanmariyang </b> 제주 비밀의숲 방문! </p>
+            </div>
+            <div class="feed_reply">
+                <span class="feed_txt"> <b> hanmariyang </b> #제주도 #제주여행 #비밀의숲 #여행추천 </span>
+                <span class="feed_txt"> <b> aaaa </b> 멋져욧 </span>
+                <span class="feed_txt"> <b> adsfg34 </b> 대박 </span>
+            </div>
+            <div
+                style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px 10px 0 10px; border-top: solid 1px lightgray;">
+                <div style="display: flex; flex-direction: row;">
+                    <span class="material-icons-outlined">
+                        sentiment_satisfied
+                    </span>
+                    <textarea style="width: 360px; height: 30px; border: none; outline: none;" placeholder="댓글 달기..."
+                        onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+                </div>
+                <div style="width: 40px;">
+
+                </div>
+                <a class="link_txt">
+                    게시
+                </a>
+            </div>
+        </div>
+        <!-- 피드 박스3 -->
+    </div>
+    <div class="right_body">
+        <div class="feed_name" style="justify-content: space-between">
+            <div style="display: flex; align-items: center; ">
+                <div class="big_profile_box">
+                    <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
+                </div>
+                <div class="name_content">
+                    <span class="feed_name_txt"> hanmariyang </span>
+                    <span class="name_content_txt"> 철기양 </span>
+                </div>
+            </div>
+
+            <a class="link_txt">
+                전환
+            </a>
+        </div>
+
+        <div class="recommend_box">
+            <span style="color: gray"> 회원님을 위한 추천</span>
+            <span style="font-size: 12px"> 모두 보기 </span>
+        </div>
+        <div>
+            <div class="feed_name" style="justify-content: space-between">
+                <div class="profile_box">
+                    <img class="profile_img"
+                        src="https://postfiles.pstatic.net/MjAxNzAxMjVfMTA3/MDAxNDg1MzQ3NDMyMTM4.2sRKA7NuS-DIbHT9Mn9QtqTAeQ86y4mmcAWKPtTXulcg.PWNltFJ638pdVapdvRtzRR9m7LavQSVTwsWJsQIeQAIg.JPEG.burudi06/IMG_20170120_171306.jpg?type=w773">
+                </div>
+                <div class="name_content">
+                    <span class="feed_name_txt"> changnam </span>
+                    <span class="name_content_txt"> farmstargram 신규가입</span>
+                </div>
+                <a class="link_txt">
+                    팔로우
+                </a>
+            </div>
+            <div class="feed_name" style="justify-content: space-between">
+                <div class="profile_box">
+                    <img class="profile_img"
+                        src="https://postfiles.pstatic.net/MjAxNzAxMjVfNjgg/MDAxNDg1MzQ3MjYzNTIw.IB5YXvQks3A7YMCGPFquwhUzk22kcIIlEbljopJI7oMg.lflw9ONya4dCz4MX2BaaVy01Dpxyetpnp7M0yqirZoYg.JPEG.burudi06/downloadfile-2.jpg?type=w773">
+                </div>
+                <div class="name_content">
+                    <span class="feed_name_txt"> taekyum </span>
+                    <span class="name_content_txt"> changnam 외 3명이 팔로우</span>
+                </div>
+                <a class="link_txt">
+                    팔로우
+                </a>
+            </div>
+            <div class="feed_name" style="justify-content: space-between">
+                <div class="profile_box">
+                    <img class="profile_img"
+                        src="https://postfiles.pstatic.net/MjAxNzAxMjVfMjI4/MDAxNDg1MzQ2MDk5NzI0.5-K0csbmI3aPSkHZhbF68ZK6zCXaQJ0UyVCJVYhExOcg.7iYR3p4BryiWYPZ7rXj0YoZuuGP6frNnjPslWRPDRHUg.JPEG.burudi06/IMG_20170118_235012.jpg?type=w773">
+                </div>
+                <div class="name_content">
+                    <span class="feed_name_txt"> wooseok </span>
+                    <span class="name_content_txt"> taekyum 외 4명이 팔로우</span>
+                </div>
+                <a class="link_txt">
+                    팔로우
+                </a>
+            </div>
+            <div class="feed_name" style="justify-content: space-between">
+                <div class="profile_box">
+                    <img class="profile_img"
+                        src="https://postfiles.pstatic.net/MjAxNzAxMjVfMTA1/MDAxNDg1MzQ0OTE3MTY1.nD1XKRmZ3qlUpPh0pPsSfrdjAYufXGOZQjCz0a8CNgcg.MU0orZNkJcyOFipkAI3FjBIiA4UbgbmaS5GSWT51liYg.PNG.burudi06/20160406_100024.png?type=w773">
+                </div>
+                <div class="name_content">
+                    <span class="feed_name_txt"> devjunseok </span>
+                    <span class="name_content_txt"> wooseok님이 팔로우합니다 </span>
+                </div>
+                <a class="link_txt">
+                    팔로우
+                </a>
+            </div>
+            <div class="feed_name" style="justify-content: space-between">
+                <div class="profile_box">
+                    <img class="profile_img"
+                        src="https://postfiles.pstatic.net/20151110_289/junirism_1447084723580AN59O_JPEG/Untitled.jpg?type=w1">
+                </div>
+                <div class="name_content">
+                    <span class="feed_name_txt"> byunyohan_official </span>
+                    <span class="name_content_txt"> devjunseok님이 팔로우합니다 </span>
+                </div>
+                <a class="link_txt">
+                    팔로우
+                </a>
+            </div>
+        </div>
+        <div class="comment_box">
+            <span> 팜스타그램 </span>
+            <span> https://hanmari-code.tistory.com/ </span>
+            <br>
+            <span> @2022 hanmari-code </span>
+
+        </div>
+    </div>
+
+    <!-- 홈 피드 모달 팝업 -->
+    <div id="home_feed_modal" class="modal_overlay_home_feed">
+        <div class="modal_window_home_feed">
+            <div class="modal_window_home_feed_detail" style="display: flex; flex-direction: row;">
+                <div class="modal_window_home_feed_detail_left" style="background: black;">
+                    <img style="object-fit: contain;"
+                        src="https://i.ytimg.com/vi/J9R6yyJuM2w/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBB3xrbEi4Rx38i5FtMNqc_2iNRTA">
+                </div>
+                <div class="modal_window_home_feed_detail_right"
+                    style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="width: 40px;"> 로고 </div>
+                            <div style="background: red;"> 프로필이름 </div>
+                        </div>
+                        <div style="width: 40px;"></div>
+                        <div style="width: 40px;"> ... </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="background:yellow;">본문</div>
+                        <div style="background: yellowgreen;">댓글</div>
+                    </div>
+                    <div style="border-top: solid 1px lightgray;"> 좋아요 및 정보칸</div>
+                    <div style="height: 30px; border-top: solid 1px lightgray;"> 댓글 달기</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 홈 피드 모달 팝업 -->
+
+
+    <script>
+    /* 모달 스크립트 */
+        $('#left_box_feed_comment_bt').click(function () {
+            $('#home_feed_modal').css({
+                display: 'flex'
+            });
+
+            $(document.body).css({
+                overflow: 'hidden'
+            });
+        });
+        /*
+                        $('#first_modal_close').click(function () {
+                            $('#first_modal').css({
+                                display: 'none'
+                            });
+                
+                            $(document.body).css({
+                                overflow: 'auto'
+                            });
+                        });*/
+
+    /* 모달 스크립트 */
+
+    /* 댓글달기 텍스트 자동사이즈 조정 */
+        function resize(obj) {
+            obj.style.height = "1px";
+            obj.style.height = (12 + obj.scrollHeight) + "px";
+        }
+    /* 댓글달기 텍스트 자동사이즈 조정 */
+    </script>
+
+
+
+
+
+    {% endblock %}
