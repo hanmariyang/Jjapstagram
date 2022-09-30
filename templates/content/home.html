@@ -3,25 +3,30 @@
 {% block content %}
 <!-- 바디 영역 -->
 <div class="main_body">
-    <div class="left_body">
+    <div class="left_body"> <!-- 왼쪽 영역 -->
         <!-- 피드 박스1 -->
         <div class="border feed_box">
-            <div class="feed_name">
-                <div class="profile_box">
-                    <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
+            <!-- 피드 작성자 이름 영역 -->
+            <div class="feed_name" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <div class="profile_box">
+                        <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
+                    </div>
+                    <span class="feed_name_txt"> hanmariyang </span>
                 </div>
-                <span class="feed_name_txt"> hanmariyang </span>
+                <div style="width: 40px;" id="home_feed_function_bt"> ... </div>
             </div>
+            <!-- 피드 이미지 -->
             <img class="feed_img"
                 src="https://i.ytimg.com/vi/J9R6yyJuM2w/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBB3xrbEi4Rx38i5FtMNqc_2iNRTA">
-
+            <!-- 피드 아이콘 -->
             <div class="feed_icon">
                 <div>
                     <span class="material-icons-outlined">
                         favorite_border
                     </span>
                     <span id="left_box_feed_comment_bt" class="material-icons-outlined">
-                        mode_comment
+                        mode_comment <!-- 클릭시 모달 팝업 오픈 -->
                     </span>
                     <span class="material-icons-outlined">
                         send
@@ -33,17 +38,21 @@
                     </span>
                 </div>
             </div>
+            <!-- 좋아요 표시 영역 -->
             <div class="feed_like">
                 <p class="feed_txt"> <b>좋아요 92개</b></p>
             </div>
+            <!-- 피드 본문 내용 -->
             <div class="feed_content">
                 <p class="feed_txt"> <b> hanmariyang </b> 새로 구매한 텐트 자랑하기</p>
             </div>
+            <!-- 피드 댓글 -->
             <div class="feed_reply">
                 <span class="feed_txt"> <b> hanmariyang </b> #가마보코3M #가을캠핑 #텐트추천 #DOD </span>
                 <span class="feed_txt"> <b> aaaa </b> 멋져욧 </span>
                 <span class="feed_txt"> <b> adsfg34 </b> 대박 </span>
             </div>
+            <!-- 피드 댓글달기 -->
             <div
                 style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px 10px 0 10px; border-top: solid 1px lightgray;">
                 <div style="display: flex; flex-direction: row;">
@@ -62,7 +71,79 @@
             </div>
         </div>
         <!-- 피드 박스1 -->
+
         <!-- 피드 박스2 -->
+        <div class="border feed_box">
+            <!-- 피드 작성자 이름 영역 -->
+            <div class="feed_name" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <div class="profile_box">
+                        <img class="profile_img" src="https://avatars.githubusercontent.com/u/113072884?v=4">
+                    </div>
+                    <span class="feed_name_txt"> hanmariyang </span>
+                </div>
+                <div style="width: 40px;" id="home_feed_function_bt"> ... </div>
+            </div>
+            <!-- 피드 이미지 -->
+            <img class="feed_img"
+                src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbSY3Xq%2FbtrKMoVsoc6%2Fu42ObomYJ4PDwYDt1hV44k%2Fimg.jpg">
+            <!-- 피드 아이콘 -->
+            <div class="feed_icon">
+                <div>
+                    <span class="material-icons-outlined">
+                        favorite_border
+                    </span>
+                    <span id="left_box_feed_comment_bt" class="material-icons-outlined">
+                        mode_comment <!-- 클릭시 모달 팝업 오픈 -->
+                    </span>
+                    <span class="material-icons-outlined">
+                        send
+                    </span>
+                </div>
+                <div>
+                    <span class="material-icons-outlined">
+                        turned_in_not
+                    </span>
+                </div>
+            </div>
+            <!-- 좋아요 표시 영역 -->
+            <div class="feed_like">
+                <p class="feed_txt"> <b>좋아요 88개</b></p>
+            </div>
+            <!-- 피드 본문 내용 -->
+            <div class="feed_content">
+                <p class="feed_txt"> <b> hanmariyang </b> 이케아 파랑파랑 방문기! </p>
+            </div>
+            <!-- 피드 댓글 -->
+            <div class="feed_reply">
+                <span class="feed_txt"> <b> hanmariyang </b> #이케아 #파랑파랑 #이케아후기 #OOTD </span>
+                <span class="feed_txt"> <b> 34sdfee </b> sososososo good~ </span>
+                <span class="feed_txt"> <b> dddd_3dr </b> 잌켘앜! </span>
+            </div>
+            <!-- 피드 댓글달기 -->
+            <div
+                style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px 10px 0 10px; border-top: solid 1px lightgray;">
+                <div style="display: flex; flex-direction: row;">
+                    <span class="material-icons-outlined">
+                        sentiment_satisfied
+                    </span>
+                    <textarea style="width: 360px; height: 30px; border: none; outline: none;" placeholder="댓글 달기..."
+                        onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+                </div>
+                <div style="width: 40px;">
+
+                </div>
+                <a class="link_txt">
+                    게시
+                </a>
+            </div>
+        </div>
+        <!-- 피드 박스2 -->
+
+
+
+
+        <!-- 피드 박스77 -->
         <div class="border feed_box">
             <div class="feed_name">
                 <div class="profile_box">
@@ -120,8 +201,8 @@
                 </a>
             </div>
         </div>
-        <!-- 피드 박스2 -->
-        <!-- 피드 박스3 -->
+        <!-- 피드 박스77 -->
+        <!-- 피드 박스88 -->
         <div class="border feed_box">
             <div class="feed_name">
                 <div class="profile_box">
@@ -178,7 +259,9 @@
                 </a>
             </div>
         </div>
-        <!-- 피드 박스3 -->
+        <!-- 피드 박스88 -->
+
+
     </div>
     <div class="right_body">
         <div class="feed_name" style="justify-content: space-between">
@@ -279,61 +362,261 @@
 
     <!-- 홈 피드 모달 팝업 -->
     <div id="home_feed_modal" class="modal_overlay_home_feed">
+        <!-- 모달 팝업 닫기 -->
+        <span id="home_feed_modal_close" class="material-icons-outlined"
+            style="color: white; position: fixed; left: 95vw; top: 3vh; cursor:pointer;">
+            close
+        </span>
+        <!-- 모달 팝업 창 영역 -->
         <div class="modal_window_home_feed">
             <div class="modal_window_home_feed_detail" style="display: flex; flex-direction: row;">
+                <!-- 모달 팝업 창 이미지 -->
                 <div class="modal_window_home_feed_detail_left" style="background: black;">
                     <img style="object-fit: contain;"
                         src="https://i.ytimg.com/vi/J9R6yyJuM2w/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBB3xrbEi4Rx38i5FtMNqc_2iNRTA">
                 </div>
+                <!-- 모달 팝업 창 본문 및 댓글 영역 -->
                 <div class="modal_window_home_feed_detail_right"
                     style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                        <div style="display: flex; flex-direction: row;">
-                            <div style="width: 40px;"> 로고 </div>
-                            <div style="background: red;"> 프로필이름 </div>
-                        </div>
-                        <div style="width: 40px;"></div>
-                        <div style="width: 40px;"> ... </div>
-                    </div>
                     <div style="display: flex; flex-direction: column;">
-                        <div style="background:yellow;">본문</div>
-                        <div style="background: yellowgreen;">댓글</div>
+                        <!-- 모달 팝업 창 작성자 이름 영역 -->
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: space-between; padding-bottom: 10px;">
+                            <div style="display: flex; flex-direction: row;">
+                                <div class="profile_box" style="width: 40px;">
+                                    <img class="profile_img"
+                                        src="https://avatars.githubusercontent.com/u/113072884?v=4">
+                                </div>
+                                <span class="feed_name_txt" style="font-size: 15pt;"> hanmariyang </span>
+                            </div>
+                            <div style="width: 40px;"></div>
+                            <div style="width: 40px;" id="home_feed_comment_modal_function_modal_bt" style="cursor: pointer;"> ... </div>
+                        </div>
+                        <!-- 모달 팝업 창 본문 -->
+                        <div style="display: flex; flex-direction: column;">
+                            <div class="feed_content"
+                                style="border-top: solid 1px lightgray; padding-top: 10px; position: top;">
+                                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                    <div style="display: flex; flex-direction: row;">
+                                        <div class="profile_box" style="width: 40px;">
+                                            <img class="profile_img"
+                                                src="https://avatars.githubusercontent.com/u/113072884?v=4">
+                                        </div>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <p class="feed_txt" style="padding-left: 10px;"> <b> hanmariyang </b> 새로 구매한
+                                                텐트 자랑하기</p>
+                                            <p class="feed_txt" style="padding-left: 10px;"> 13시간 전 </p>
+                                        </div>
+                                    </div>
+                                    <span class="material-icons-outlined">
+                                        favorite_border
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- 모달 팝업 창 댓글 전체 영역 -->
+                            <div class="feed_reply">
+                                <!-- 모달 팝업 창 개인 댓글 -->
+                                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                    <div style="display: flex; flex-direction: row;">
+                                        <div class="profile_box" style="width: 40px;">
+                                            <img class="profile_img"
+                                                src="https://avatars.githubusercontent.com/u/113072884?v=4">
+                                        </div>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <p class="feed_txt" style="padding-left: 10px;"> <b> hanmariyang </b>
+                                                #가마보코3M #가을캠핑 #텐트추천 #DOD </p>
+                                            <p class="feed_txt" style="padding-left: 10px;"> 13시간 전 <a
+                                                    style="padding-left: 10px;">답글 달기</a></p>
+                                        </div>
+                                    </div>
+                                    <span class="material-icons-outlined">
+                                        favorite_border
+                                    </span>
+                                </div>
+                                <!-- 모달 팝업 창 개인 댓글 -->
+                                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                    <div style="display: flex; flex-direction: row;">
+                                        <div class="profile_box" style="width: 40px;">
+                                            <img class="profile_img"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeeHLfBu6A2y5Q1bKsbVxEVfLGt4HLr9dJXA&usqp=CAU">
+                                        </div>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <p class="feed_txt" style="padding-left: 10px;"> <b> aaaa </b> 멋져욧</p>
+                                            <p class="feed_txt" style="padding-left: 10px;"> 12시간 전 <a>답글 달기</a></p>
+                                        </div>
+                                    </div>
+                                    <span class="material-icons-outlined">
+                                        favorite_border
+                                    </span>
+                                </div>
+                                <!-- 모달 팝업 창 개인 댓글 -->
+                                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                    <div style="display: flex; flex-direction: row;">
+                                        <div class="profile_box" style="width: 40px;">
+                                            <img class="profile_img"
+                                                src="https://t1.daumcdn.net/cfile/tistory/99CD68345C51B61F0C">
+                                        </div>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <p class="feed_txt" style="padding-left: 10px;"> <b> adsfg34 </b> 대박</p>
+                                            <p class="feed_txt" style="padding-left: 10px;"> 11시간 전 <a>답글 달기</a></p>
+                                        </div>
+                                    </div>
+                                    <span class="material-icons-outlined">
+                                        favorite_border
+                                    </span>
+                                </div>
+                                <!-- 모달 팝업 창 개인 댓글 -->
+                            </div>
+                        </div>
                     </div>
-                    <div style="border-top: solid 1px lightgray;"> 좋아요 및 정보칸</div>
-                    <div style="height: 30px; border-top: solid 1px lightgray;"> 댓글 달기</div>
+                    <!-- 모달 팝업 창 개인 댓글 -->
+                    <!-- 모달 팝업 창 아이콘, 좋아요, 댓글 전체 영역 -->
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="display: flex; flex-direction: column;">
+                            <!-- 모달 팝업 창 아이콘 영역 -->
+                            <div class="feed_icon" style="border-top: solid 1px lightgray; padding-top: 10px;">
+                                <div>
+                                    <span class="material-icons-outlined">
+                                        favorite_border
+                                    </span>
+                                    <span id="left_box_feed_comment_bt" class="material-icons-outlined">
+                                        mode_comment
+                                    </span>
+                                    <span class="material-icons-outlined">
+                                        send
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="material-icons-outlined">
+                                        turned_in_not
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- 모달 팝업 창 좋아요 영역 -->
+                            <div class="feed_like" style="padding-top: 10px;">
+                                <p class="feed_txt"> <b>좋아요 92개</b></p>
+                                <p class="feed_txt" style="color: lightgray;"> 14시간 전</p>
+                            </div>
+                        </div>
+                        <!-- 모달 팝업 창 댓글달기 영역 -->
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px 10px 0 10px; border-top: solid 1px lightgray;">
+                            <div style="display: flex; flex-direction: row;">
+                                <span class="material-icons-outlined">
+                                    sentiment_satisfied
+                                </span>
+                                <textarea
+                                    style="width: 25vw; max-width: 568px; min-width: 274px; height: 30px; border: none; outline: none;"
+                                    placeholder="댓글 달기..." onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+                            </div>
+                            <div style="width: 40px;">
+
+                            </div>
+                            <a class="link_txt">
+                                게시
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
     <!-- 홈 피드 모달 팝업 -->
+    <!-- home/feed (... 기능) 모달 팝업 -->
+    <div id="home_feed_function_modal" class="modal_overlay_home_feed_function">
+        <div class="modal_window_home_feed_function">
+            <div style="display: flex; flex-direction: column; text-align: center;">
+                <span class="home_feed_function_text" style="border: none; color: red;">신고</span>
+                <span class="home_feed_function_text" style="color: red;"">팔로우 취소</span>
+                <span class=" home_feed_function_text">즐겨찾기에 추가</span>
+                <span class="home_feed_function_text">게시물로 이동</span>
+                <span class="home_feed_function_text">링크 복사</span>
+                <span id="home_feed_function_modal_close" class="home_feed_function_text">취소</span>
+            </div>
+        </div>
+    </div>
+    <!-- home/feed (... 기능) 모달 팝업 -->
+
+    <!-- home_feed_modal (... 기능) 모달 팝업 -->
+    <div id="home_feed_comment_modal_function_modal" class="modal_overlay_home_feed_function">
+        <div class="modal_window_home_feed_function">
+            <div style="display: flex; flex-direction: column; text-align: center;">
+                <span class="home_feed_function_text" style="border: none; color: red;">신고</span>
+                <span class="home_feed_function_text" style="color: red;"">팔로우 취소</span>
+                <span class=" home_feed_function_text">즐겨찾기에 추가</span>
+                <span class="home_feed_function_text">게시물로 이동</span>
+                <span class="home_feed_function_text">링크 복사</span>
+                <span id="home_feed_comment_modal_function_modal_close" class="home_feed_function_text">취소</span>
+            </div>
+        </div>
+    </div>
+    <!-- home_feed_modal (... 기능) 모달 팝업 -->
 
 
     <script>
-    /* 모달 스크립트 */
+        /* 모달 스크립트 */
+
+        /* 홈 피드 코멘트 아이콘 클릭 모달 스크립트 */
         $('#left_box_feed_comment_bt').click(function () {
             $('#home_feed_modal').css({
-                display: 'flex'
+                display: 'flex',
+                "top": (($(window).height()-$("#home_feed_modal").outerHeight())/2+$(window).scrollTop())+"px",
+                "left": (($(window).width()-$("#home_feed_modal").outerWidth())/2+$(window).scrollLeft())+"px"
             });
 
             $(document.body).css({
                 overflow: 'hidden'
             });
+
         });
-        /*
-                        $('#first_modal_close').click(function () {
-                            $('#first_modal').css({
-                                display: 'none'
-                            });
-                
-                            $(document.body).css({
-                                overflow: 'auto'
-                            });
-                        });*/
 
-    /* 모달 스크립트 */
+        /* 홈 피드 코멘트 아이콘 모달 닫기 스크립트 */
+        $('#home_feed_modal_close').click(function () {
+            $('#home_feed_modal').css({
+                display: 'none'
+            });
 
-    /* 댓글달기 텍스트 자동사이즈 조정 */
+            $(document.body).css({
+                overflow: 'auto'
+            });
+        });
+
+        /* home/feed ...기능 */
+        $('#home_feed_function_bt').click(function () {
+            $('#home_feed_function_modal').css({
+                display: 'flex',
+                "top": (($(window).height()-$("#home_feed_function_modal").outerHeight())/2+$(window).scrollTop())+"px",
+                "left": (($(window).width()-$("#home_feed_function_modal").outerWidth())/2+$(window).scrollLeft())+"px"
+            });
+        });
+
+        $('#home_feed_function_modal_close').click(function () {
+            $('#home_feed_function_modal').css({
+                display: 'none'
+            });
+        });
+        /* home/feed ...기능 */
+
+        /* home_feed_comment_modal_function_modal ...기능 */
+        $('#home_feed_comment_modal_function_modal_bt').click(function () {
+            $('#home_feed_comment_modal_function_modal').css({
+                display: 'flex',
+                "top": (($(window).height()-$("#home_feed_comment_modal_function_modal").outerHeight())/2+$(window).scrollTop())+"px",
+                "left": (($(window).width()-$("#home_feed_comment_modal_function_modal").outerWidth())/2+$(window).scrollLeft())+"px"
+            });
+        });
+
+        $('#home_feed_comment_modal_function_modal_close').click(function () {
+            $('#home_feed_comment_modal_function_modal').css({
+                display: 'none'
+            });
+        });
+        /* home/feed ...기능 */
+
+        /* 모달 스크립트 */
+
+        /* 댓글달기 텍스트 자동사이즈 조정 */
         function resize(obj) {
             obj.style.height = "1px";
             obj.style.height = (12 + obj.scrollHeight) + "px";
